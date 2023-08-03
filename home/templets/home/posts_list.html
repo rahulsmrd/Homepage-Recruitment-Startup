@@ -1,0 +1,21 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block body %}
+<h1 class="text-center m-5">Posts</h1>
+
+<div class="container">
+    <div class="container">
+        {% for post in posts_list %}
+        <div class="card p-5 m-5">
+            <h1><b>{{ post.post_designation }}</b></h1>
+            <p>posted by : {{ post.name }}</p>
+            <h3><i class="bi bi-briefcase-fill me-3"></i>Experience : {{ post.experience }}</h3>
+            <h3><i class="bi bi-cash me-3"></i> Salary : {{ post.salary }}</h3>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Skill Test{% endblock %}
+
+{% block body %}
+
+<div class="container m-5">
+    <div class="card m-5">
+        <h1 class="text-center">Your Test has been submitted Successfully !!!</h1>
+        <br><br><br>
+        <h2 class="text-center">Your test Score is {{ scoor }}</h2>
+        <h4>Do you want to <a href="{% url 'skill_test' %}">Retake the test</a></h4>
+        <h4>Go to <a href="{% url 'home' %}">Home</a></h4>
+    </div>
+
+</div>
+
+{% endblock %}

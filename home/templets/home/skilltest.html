@@ -1,0 +1,104 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Skill Test{% endblock %}
+
+{% block body %}
+
+<h1 class="text-center">A Sample Skill test</h1>
+
+<div class="container m-5">
+    <form method="post">
+        {% csrf_token %}
+        <div class="p-3">
+            <h3>1. What will You do in the below Scenario ?</h3>
+            <p><b>Scenario :</b><br>
+                You are building a website where you have created a box which have to rotate 360 degrees on hovering on
+                it.
+            </p>
+            <input type="radio" class="text-start" name="option1" value="A" id="option1">A.<br>.rotate{<br>
+            width:50px;
+            background-color:red;
+            transform:rotateZ(180deg);
+            transition:transform 2s;<br>
+            } <br>
+            .rotate:hover{<br>
+            tarnsform:rotateZ(360deg);<br>
+            }</p>
+            <input type="radio" class="text-start" name="option1" value="B" id="option1">B.<br>#rotate{<br>
+            width:50px;
+            background-color:red;
+            transform:rotateZ(180deg);
+            transition:transform 2s;<br>
+            } <br>
+            .rotate:hover{<br>
+            tarnsform:rotateZ(360deg);<br>
+            }</p>
+            <input type="radio" class="text-start" name="option1" value="C" id="option1">C.<br>.rotate{<br>
+            width:50px;
+            background-color:red;
+            transform:rotateZ(180deg);
+            transition:transform 2s;<br>
+            } <br>
+            .rotate::hover{<br>
+            tarnsform:rotateZ(360deg);<br>
+            }</p>
+            <input type="radio" class="text-start" name="option1" value="D" id="option1">D.<br>.rotate{<br>
+            width:50px;
+            background-color:red;
+            transform:rotateZ(180deg);
+            transition:transform 2s;<br>
+            } <br>
+            #rotate:hover{<br>
+            tarnsform:rotateZ(360deg);<br>
+            }</p>
+        </div>
+
+
+        <div class="p-3">
+            <h3>2. What will You do in the below Scenario ?</h3>
+            <p><b>Scenario :</b><br>
+                You have created a website for desktop view having a border of all the blocks is 10px solid black and
+                font-family is Arial.But in mobile view you should have a dotted border with 5px and font as Times New
+                Roman.
+            </p>
+            <input type="radio" class="text-start" name="option2" value="A" id="option1">A.<br>@media only screen and
+            (max-width: 768px) <br>
+
+            {<br>
+            body{<br>
+            border:5px dotted black;
+            font-family:Times New Roman;
+            }
+            } <br>
+            <input type="radio" class="text-start" name="option2" value="B" id="option1">B.<br>@media only screen<br>
+
+            {<br>
+            body{<br>
+            border:5px dotted black;
+            font-family:Times New Roman;
+            }
+            } <br>
+            <input type="radio" class="text-start" name="option2" value="C" id="option1">C.<br>@media only (max-width:
+            768px) <br>
+
+            {<br>
+            body{<br>
+            border:5px dotted black;
+            font-family:Times New Roman;
+            }
+            } <br>
+            <input type="radio" class="text-start" name="option2" value="D" id="option1">D.<br>@media only <br>
+
+            {<br>
+            body{<br>
+            border:5px dotted black;
+            font-family:Times New Roman;
+            }
+            } <br>
+        </div>
+
+        <button type="submit" class="btn btn-outline-success">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

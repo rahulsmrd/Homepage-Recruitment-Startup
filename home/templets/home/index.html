@@ -1,0 +1,152 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block body %}
+<div class="container-fluid bg-image px-0">
+    <div class="container absolutecenter head box-color px-5">
+        <h1 class="head" style="text-align: center;"> <span class="increase">G</span>et the top Hirer </h1>
+        <h1 class="head mt-3"><span class="increase">B</span>e the top Hirer</h1>
+        <div class="d-flex mb-5 mt-3 mx-5">
+            {% if user.is_authenticated %}
+            {% if recruiter %}
+            <a class="btn btn-outline-primary mx-3 fs-4" aria-current="page" href="{% url 'create_post' %}">Create Post</a>
+            <a class="btn btn-outline-warning px-3 fs-4" aria-current="page" href="{% url 'posts' %}">See Posts</a>
+            {% else %}
+            <a class="btn btn-outline-warning px-3 fs-4" aria-current="page" href="{% url 'posts' %}">See Posts</a>
+            {% endif %}
+            {% else %}
+            <a class="btn btn-outline-primary mx-3 fs-4" aria-current="page" href="{% url 'signup' 0 %}">Get Recruited</a>
+            <a class="btn btn-outline-warning px-3 fs-4" aria-current="page" href="{% url 'signup' 1 %}">Heir</a>
+            {% endif %}
+        </div>
+    </div>
+    <img src="{% static 'pic-1.jpg' %}" alt="hello" class="bg-image">
+</div>
+<br><br>
+<h1 class="text-center" style="text-decoration:underline;color: crimson;"> <span
+        style="font-size: 1.5em;font-weight: 900;">O</span>ur Top <span
+        style="font-size: 1.5em;font-weight: 900;">R</span>ecruiters</h1><br><br>
+<div class="container-fluid text-center"
+    style="-webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%);mask-image: linear-gradient(black, transparent);">
+    <marquee behavior="alternative" direction="right" scrollamount="12" width="95%">
+        <img src="{% static 'accenture-logo.png' %}" alt="" class="image">
+        <img src="{% static 'amazon-logo.jpg' %}" alt="" class="image">
+        <img src="{% static 'apple.png' %}" alt="" class="image">
+        <img src="{% static 'audi-logo.png' %}" alt="" class="image">
+        <img src="{% static 'bmw-logo.png' %}" alt="" class="image">
+        <img src="{% static 'cisco-logo.png' %}" alt="" class="image">
+        <img src="{% static 'coca-cola-logo.png' %}" alt="" class="image">
+        <img src="{% static 'deloitte.png' %}" alt="" class="image">
+        <img src="{% static 'honda-logo.png' %}" alt="" class="image">
+        <img src="{% static 'hp.png' %}" alt="" class="image">
+        <img src="{% static 'ibm-logo.png' %}" alt="" class="image">
+        <img src="{% static 'intel-logo.png' %}" alt="" class="image">
+    </marquee>
+    <marquee behavior="alternative" direction="left" scrollamount="12" width="95%">
+        <img src="{% static 'accenture-logo.png' %}" alt="" class="image">
+        <img src="{% static 'Google-Logo-2015-present.jpg' %}" alt="" class="image">
+        <img src="{% static 'logo-coursifyme.png' %}" alt="" class="image">
+        <img src="{% static 'mercedes-benz-logo.png' %}" alt="" class="image">
+        <img src="{% static 'bmw-logo.png' %}" alt="" class="image">
+        <img src="{% static 'microsoft-logo.png' %}" alt="" class="image">
+        <img src="{% static 'netflix-logo.png' %}" alt="" class="image">
+        <img src="{% static 'oracle-logo.png' %}" alt="" class="image">
+        <img src="{% static 'pepsi-logo.png' %}" alt="" class="image">
+        <img src="{% static 'hp.png' %}" alt="" class="image">
+        <img src="{% static 'samsung-logo.png' %}" alt="" class="image">
+        <img src="{% static 'toyota-logo.png' %}" alt="" class="image">
+    </marquee>
+    <marquee behavior="alternative" direction="right" scrollamount="12" width="95%">
+        <img src="{% static 'amazon-logo.jpg' %}" alt="" class="image">
+        <img src="{% static 'audi-logo.png' %}" alt="" class="image">
+        <img src="{% static 'visa-logo.png' %}" alt="" class="image">
+        <img src="{% static 'walmart-logo.png' %}" alt="" class="image">
+        <img src="{% static 'bmw-logo.png' %}" alt="" class="image">
+        <img src="{% static 'apple.png' %}" alt="" class="image">
+        <img src="{% static 'cisco-logo.png' %}" alt="" class="image">
+        <img src="{% static 'ibm-logo.png' %}" alt="" class="image">
+        <img src="{% static 'hp.png' %}" alt="" class="image">
+        <img src="{% static 'honda-logo.png' %}" alt="" class="image">
+        <img src="{% static 'intel-logo.png' %}" alt="" class="image">
+        <img src="{% static 'walt-disney-logo.png' %}" alt="" class="image">
+    </marquee>
+</div>
+<h1 style="text-align: center;color: orangered;text-decoration: underline;" class="my-5">How do <span
+        style="font-size: 1.5em;font-weight: 900;">Coursify</span> Help you ?</h1>
+<div class="card m-5 p-5" style="border-radius:2em;border: 0.5em double black;">
+    <ol>
+        <div class="floating">
+            <li style="font-size: 2.5em;font-weight: 900;">Our Trusted Skill Test !!!</li>
+            <p style="font-size: 1.5em;"> <img src="{% static 'skills-tests.jpg' %}" alt="Sorry" width="250em"
+                    height="250em" style="float: right;">We have been providing the job seeeker with a <b>Skill
+                    Test</b> in the related domain. <br>
+                The score of this <b>Skill Test</b> is taken as the score of the talant in the related Domain. <br>
+                This skill test will make our Job Finders <b>Visible</b> to top Recruiters. <br>
+                And make the job of Heriring Parties. <br></p>
+            <a class="btn btn-outline-primary" aria-current="page" href="#">Take a Skill Test</a>
+        </div>
+    </ol>
+</div>
+<div class="card p-5" style="border-radius:2em;border: 0.5em double black;margin: 8em;">
+    <ol>
+        <div class="floating">
+            <h1 style="text-align: center;"><b>2. Our Powerful SEO</b></h1>
+            <p style="font-size: 1.5em;"> <img src="{% static 'seo.png' %}" alt="Sorry" width="350em" height="250em"
+                    style="float: left; margin-right: 1em;">
+                Making the work <b>Easy</b> to the users of our Portal, we have made the <b>Best and Powerful
+                    SEO</b>.<br>
+                This helps the Recruiters to find the people of <b>Relavant needed Skills</b> <br>
+                For Job Finder side we provide with the best search to their skill and also the best Companies. <br>
+            </p>
+            <a class="btn btn-outline-warning" aria-current="page" href="#">Explore</a>
+        </div>
+    </ol>
+</div>
+<div class="card p-5 mb-5" style="border-radius:2em;border: 0.5em double black;margin-inline: 13em;">
+    <ol>
+        <div class="floating">
+            <h1><b>3.We suggest some top Courses</b></h1>
+            <p style="font-size: 1.5em;"> <img src="{% static 'courses.jpg' %}" alt="Sorry" width="250em" height="250em"
+                    style="float: right; margin: 1em;border-radius: 2em; ">
+                We will be providing some <b>Top Courses</b> which are helpful to crack a interview. <br>
+                Our <b>Well Knowledged</b> instructors will guide you to <b>Real World </b>scenario and help knowing
+                helpfull Things. <br>
+                <b>Completion Cirtificates from our company are taking a high weight in Hering Process.</b>
+            </p>
+            <a class="btn btn-outline-success" aria-current="page" href="#">Get to Courses</a>
+        </div>
+</div>
+
+<div class="container-fluid" style="background-color: black; color: white;">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-4 my-5 p-5">
+            <ul>
+                <li class="m-3">
+                    <h4>About us</h4>
+                </li>
+                <li class="m-3">
+                    <h4>About our Skill Test</h4>
+                </li>
+                <li class="m-3">
+                    <h4>Collaborated Companies</h4>
+                </li>
+                <li class="m-3">
+                    <h4>Job Seakers</h4>
+                </li>
+                <li class="m-3">
+                    <h4>Recruiters</h4>
+                </li>
+            </ul>
+        </div>
+        <div class="col"></div>
+        <div class="col-4 my-5">
+            <h4>Reach us at</h4><br>
+            <h2><i class="bi bi-instagram"></i> Instagram</h2>
+            <h2><i class="bi bi-facebook"></i> Facebook</h2>
+            <h2><i class="bi bi-twitter"></i> Twitter</h2>
+            <h2><i class="bi bi-linkedin"></i> LinkedIn</h2>
+        </div>
+    </div>
+    <p class="text-center p-0 m-0" style="background-color: rgb(177, 176, 176);color: black;">All copyrights received 2021-2023</p>
+</div>
+{% endblock %}
